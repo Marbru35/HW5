@@ -23,8 +23,8 @@ public class Student {
 		return name;
 	}
 	
-	public void addProject(Project project) {
-		
+	public void addProject(Project project) { // Student kann 0..1 Projects haben
+		this.project = project;
 	}
 	
 	public Project getProject() {

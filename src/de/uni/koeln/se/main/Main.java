@@ -16,7 +16,8 @@ public class Main {
 		st1.addExam(exam1); // Student kann 0..* Exams haben
 		
 		Project pr1 = new Project("Projekt 1");
-		pr1.addMember(st1);
+		pr1.addMember(st1); // Project kann 0..* Students haben
+		st1.addProject(pr1); // Student kann 0..1 Projects haben
 		
 	}
 
