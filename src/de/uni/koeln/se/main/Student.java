@@ -15,7 +15,7 @@ public class Student {
 		this.name = name;
 	}
 	
-	public void addExam(Exam exam) {
+	public void addExam(Exam exam) { // Student hat * Exams
 		exams.add(exam);
 	}
 	

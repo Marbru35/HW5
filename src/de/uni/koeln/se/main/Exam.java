@@ -30,4 +30,8 @@ public class Exam {
 		return students;
 	}
 	
+	public void setMaxValue(int max) {
+		this.maxValue = max;
+	}
+	
 }

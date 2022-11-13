@@ -1,7 +1,5 @@
 package de.uni.koeln.se.main;
 
-import java.util.ArrayList;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -15,15 +13,17 @@ public class Main {
 		
 		st1.addExam(exam1); // Student kann 0..* Exams haben
 		
-		Project pr1 = new Project("Projekt 1");
+		Course c1 = new Course(301, "Softwaretechnik", 180);
+		
+		Project pr1 = new Project("Projekt 1", c1); // Jedes Project hat genau 1 Course
 		pr1.addMember(st1); // Project kann 0..* Students haben
 		st1.addProject(pr1); // Student kann 0..1 Projects haben
 		
-		Employee e1 = new Employee("Rosenkranz", 8428);
-		
 		Department d1 = new Department("Informatik"); 
+		Employee e1 = new Employee("Müller", 8428, d1); // Aggregation; jeder Employee hat genau 1 Department
 		d1.addEmployee(e1); // Department kann 0:..* Employees haben
-		
+		Professor p1 = new Professor("Vogelsang", 7898, d1, 30); // Inheritance von Employee
+		p1.addExam(exam1); // Professor kann 0..* Exams haben
 	}
 
 }

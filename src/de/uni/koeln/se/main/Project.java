@@ -6,9 +6,11 @@ public class Project {
 	
 	private String name;
 	private ArrayList<Student> members = new ArrayList<>();
+	private Course course;
 	
-	public Project(String name) {
+	public Project(String name, Course course) { // Jedes Project hat genau 1 Course
 		this.name = name;
+		this.course = course;
 	}
 	
 	public String getName() {
