@@ -13,7 +13,7 @@ public class Exam {
 		addQuestion(id, task, value);
 	}
 	
-	public boolean register(Student student) {
+	public boolean register(Student student) { // Exam kann 0..* Students haben
 		if (students.contains(student)) {
 			return false;
 		} else {

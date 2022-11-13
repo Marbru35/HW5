@@ -19,6 +19,11 @@ public class Main {
 		pr1.addMember(st1); // Project kann 0..* Students haben
 		st1.addProject(pr1); // Student kann 0..1 Projects haben
 		
+		Employee e1 = new Employee("Rosenkranz", 8428);
+		
+		Department d1 = new Department("Informatik"); 
+		d1.addEmployee(e1); // Department kann 0:..* Employees haben
+		
 	}
 
 }
